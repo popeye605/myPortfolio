@@ -1,0 +1,687 @@
+/* Reset default browser margins and paddings */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif, Helvetica;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    overflow: hidden;
+}
+
+nav {
+    width: 100%;
+    height: 10vh;
+    position: sticky;
+    top: 0; /* Ensure the navbar sticks to the top */
+}
+
+.nav-container {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.logo span {
+    color: rgb(211, 3, 3);
+    text-shadow: 0 0 10px rgb(211, 3, 3);
+}
+
+.hamburg,
+.cancel {
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: white;
+    display: none;
+    font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
+}
+
+.links {
+    display: flex;
+}
+
+.link a {
+    font-size: 1.2rem;
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 550;
+    transition: color 0.3s linear, border-bottom 0.3s linear;
+}
+
+.link a:hover {
+    color: rgb(211, 3, 3);
+    border-bottom: 2px solid rgb(211, 3, 3);
+}
+
+.dropdown {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    transform: translateY(-500px);
+    width: 100%;
+    display: none;
+    height: auto;
+    backdrop-filter: blur(4px) brightness(40%);
+    box-shadow: 0 0 20px black;
+    transition: 0.2s linear;
+}
+
+/* Assuming .links is a child of .dropdown */
+.dropdown .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown .links a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 0;
+    transition: 0.2s linear;
+}
+
+.dropdown .links a:hover {
+    background-color: rgb(211, 3, 3);
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.content {
+    color: white;
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.content h1 span {
+    color: rgb(211, 3, 3);
+    text-shadow: 0 0 10px rgb(211, 3, 3);
+}
+
+.typewriter {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.social-links {
+    margin: 1rem 0;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 10px;
+    font-size: 2rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: rgb(211, 3, 3);
+}
+
+.btn a { /* Added to style the anchor tag as a button */
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: rgb(211, 3, 3);
+    border: none;
+    color: white;
+    text-decoration: none; /* Removes underline */
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.btn a:hover {
+    background-color: black;
+    color: rgb(211, 3, 3);
+    
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Adjusted selectors */
+.nav-container .link {
+    display: flex;
+}
+
+.nav-container .link a {
+    font-size: 1.2rem;
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 550;
+    transition: color 0.3s linear, border-bottom 0.3s linear;
+}
+
+.nav-container .link a:hover {
+    color: rgb(211, 3, 3);
+    border-bottom: 2px solid rgb(211, 3, 3);
+}
+
+section {
+    width: 100%;
+    height: 90vh;
+}
+
+.main-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.main-container .content {
+    color: white;
+    width: 40%;
+    min-height: 100px;
+}
+
+.content h1 span {
+    font-weight: 700;
+    text-shadow: 0 0 10px rgb(211, 3, 3);
+    color: rgb(211, 3, 3);
+}
+
+.content .typewriter {
+    font-size: clamp(1rem, 1rem + 5vw, 2.5rem);
+    font-weight: 700;
+}
+
+.typewriter span {
+    color: rgb(211, 3, 3);
+    text-shadow: 0 0 10px rgb(211, 3, 3);
+}
+
+.content p {
+    font-size: clamp(0.4rem, 0.2rem + 9vw, 1rem);
+    margin: 10px 0;
+}
+
+.social-links i {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: transparent;
+    border: 0.2rem solid rgb(211, 3, 3);
+    border-radius: 50%;
+    color: rgb(211, 3, 3);
+    margin: 0 15px;
+    font-size: 1.5rem;
+    transition: 0.2s linear;
+}
+
+.social-links i:hover {
+    scale: 1.3;
+    filter: drop-shadow(0 0 10px rgb(211, 3, 3));
+    color: black;
+    background-color: rgb(211, 3, 3);
+}
+
+.content button {
+    width: 40%;
+    height: 8vh;
+    margin: 30px;
+    background-color: rgb(211, 3, 3);
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 120%;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: 0.2s linear;
+}
+
+.content button:hover {
+    scale: 1.1;
+    color: rgb(211, 3, 3);
+    border: 2px solid rgb(211, 3, 3);
+    background-color: transparent;
+    font-weight: 700;
+    box-shadow: 0 0 50px rgb(211, 3, 3);
+}
+
+.main-container .image {
+    width: 500px;
+    height: 340px;
+    border-radius: 100%;
+    overflow: hidden;
+    box-shadow: 0 0 50px rgb(211, 3, 3);
+}
+
+.main-container .image img {
+    width: 100%;
+}
+
+.main-container .image:hover {
+    animation: animate 1.5s ease-in-out;
+}
+
+@keyframes animate {
+    0% {
+        scale: 1;
+    }
+    50% {
+        scale: 1.05;
+    }
+    100% {
+        scale: 1;
+    }
+}
+
+@media (max-width: 884px) {
+    nav .logo {
+        position: absolute;
+        top: 16px;
+        left: 15px;
+        font-size: 1.5rem;
+    }
+    
+    .nav-container .links {
+        display: none;
+    }
+
+    .hamburg,
+    .cancel,
+    .dropdown {
+        display: block;
+    }
+
+    .main-container .content {
+        width: 80%;
+    }
+
+    .social-links i {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+    }
+
+    .main-container .image {
+        width: 50%;
+        height: 60%;
+    }
+}
+
+@media (max-width: 440px) {
+    .main-container .image {
+        width: 70%;
+        height: 60%;
+    }
+
+    .main-container .content {
+        width: 80%;
+    }
+
+    .main-container button {
+        margin-top: 15px;
+    }
+}
+
+
+
+
+
+
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212; /* Dark background for contrast */
+    color: white; /* Default text color */
+}
+
+/* Navigation Styling */
+nav {
+    background-color: #1a1a1a; /* Dark background for navigation */
+    padding: 10px 20px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.links {
+    display: flex;
+}
+
+.link {
+    margin: 0 10px;
+}
+
+.link a {
+    color: white;
+    text-decoration: none;
+}
+
+.hamburg, .cancel {
+    color: white;
+}
+
+/* About Section */
+.aboutSection {
+    padding: 20px;
+    background-color:transparent; /* Dark background for contrast */
+    color: white; /* Default text color */
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+   
+    
+}
+
+/* Heading styles */
+.about-section h1, .about-section h2 {
+    color: red ; /* Red color for all headings */
+    cursor: pointer; /* Cursor to indicate clickable elements */
+    margin-bottom: 10px;
+}
+
+/* Image styling */
+.about-image img {
+    width: 30vw; /* Adjust image width */
+    height: auto;
+    opacity: 0.8; /* Lower opacity for effect */
+}
+
+/* Text and content sections
+  .blogSection, .hobbiesSection {
+    margin-bottom: 20px;
+    border: 1px solid yellow;
+    width:100%;
+    height:100%;
+     border-radius: 15px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background-color: rgb(92, 65, 65);
+
+} */
+
+/* .educationSection{
+    margin-bottom: 20px;
+    border: 1px solid rgb(0, 26, 255);
+    width:100%;
+    height:100%;
+     border-radius: 15px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background-color: rgb(92, 65, 65);
+} */
+
+
+/* Ensure the .toggle-content is initially hidden */
+.toggle-content {
+    display: none; /* Hide the content by default */
+    margin-top: 10px; /* Optional: Add space above the content */
+    overflow: hidden; /* Hide overflow text */
+    max-height: 200px; /* Limit height to prevent overflow */
+    /* overflow-y: auto;  */
+    background-color: transparent;
+    
+}
+
+.toggle-content:hover {
+    display: block;
+    box-shadow: 0 0 200px rgb(211, 3, 3);
+    
+}
+
+/* Styling for the educationSection */
+.educationSection {
+    margin-bottom: 0px;
+    border: 1px solid rgb(0, 26, 255);
+    width: 100%;
+    height: auto; /* Adjust to content height */
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Position relative to manage content positioning */
+    padding: 10px; /* Add padding for better spacing */
+    transition: background-color ease 0.3;
+    
+}
+
+/* Hide header text on hover */
+.educationSection:hover .header {
+    display: none; /* Hide the header text when hovering */
+    
+    
+}
+.educationSection:hover {
+    background-color: transparent; 
+}
+
+/* Show content on hover */
+.educationSection:hover .toggle-content {
+    display: block;
+    box-shadow: 0 0 200px rgb(211, 3, 3);
+    
+   
+}
+.skillsSection{
+    margin-bottom: 0px;
+    border: 1px solid rgb(0, 26, 255);
+    width: 100%;
+    height: auto; /* Adjust to content height */
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Position relative to manage content positioning */
+    padding: 10px; /* Add padding for better spacing */
+    background-color: transparent;
+
+}
+
+/* Hide header text on hover */
+.skillsSection:hover .header {
+    display: none; /* Hide the header text when hovering */
+    
+    
+}
+
+/* Show content on hover */
+.skillsSection:hover .toggle-content {
+    display: block; /* Display the content when hovering over the parent section */
+    box-shadow: 0 0 200px rgb(211, 3, 3);
+
+}
+.blogSection{
+    margin-bottom: 0px;
+    border: 1px solid rgb(0, 26, 255);
+    width: 100%;
+    height: auto; /* Adjust to content height */
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Position relative to manage content positioning */
+    padding: 10px; /* Add padding for better spacing */
+    background-color: transparent;
+
+}
+
+/* Hide header text on hover */
+.blogSection:hover .header {
+    display: none; /* Hide the header text when hovering */
+    
+    
+}
+
+/* Show content on hover */
+.blogSection:hover .toggle-content {
+    display: block; /* Display the content when hovering over the parent section */
+    box-shadow: 0 0 200px rgb(211, 3, 3);
+
+}
+
+.hobbiesSection{
+    margin-bottom: 0px;
+    border: 1px solid rgb(0, 26, 255);
+    width: 100%;
+    height: auto; /* Adjust to content height */
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Position relative to manage content positioning */
+    padding: 20px; /* Add padding for better spacing */
+    background-color: transparent;
+
+}
+
+/* Hide header text on hover */
+.hobbiesSection:hover .header {
+    display: none; /* Hide the header text when hovering */
+    
+    
+}
+
+/* Show content on hover */
+.hobbiesSection:hover .toggle-content {
+    display: block; /* Display the content when hovering over the parent section */
+    box-shadow: 0 0 200px rgb(211, 3, 3);
+
+}
+
+
+
+
+
+
+.about-text{
+    margin-bottom: 25px;
+    
+}
+/* Toggle content initially hidden */
+/* .toggle-content {
+    display: none;
+    margin-top: 10px;
+    
+    
+} */
+
+/* Toggle button and hover effect */
+.about-section h2:hover {
+    text-decoration: none; /* Adds underline on hover */
+    scale: 1.1;
+    color: rgb(211, 3, 3);
+    background-color: transparent;
+    font-weight: 1400;
+    box-shadow: 0 0 200px rgb(211, 3, 3);
+    border-radius: 20px;
+    padding: 2;
+    text-align:center;
+    width: 330px;
+}
+
+/* List styling */
+.skills-list, .blog-list, .hobbies-list {
+    list-style: none; /* Removes default list style */
+    padding: 0;
+    
+}
+
+.skills-list li, .blog-list li, .hobbies-list li {
+    margin-bottom: 10px;
+    display: flex; /* For alignment */
+    align-items: center;
+}
+
+/* Icons styling */
+.skills-list li i, .hobbies-list li i {
+    margin-right: 10px; /* Spacing between icon and text */
+    color: red; /* Icon color */
+    
+}
+.mainDiv{
+    /* border:2px solid green; */
+    display: flex;
+    width: 100%;
+    /* margin-top: 90px; */
+    flex-direction: column;
+    height:90%;
+    gap:20px;
+    margin: 50px;
+    
+}
+.section1{
+    /* border: 2px solid yellow; */
+    display: flex;
+    flex-direction: row;
+    height:50%;
+    gap:20px;
+}
+.section2{
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: row;
+    height:50%;
+    gap:20px;
+}
+.blur-background {
+    transition: filter 0.3s ease; /* Smooth transition for blur effect */
+    position: relative;
+}
+
+
+/* Apply blur effect */
+.blurred {
+    /* filter: blur(1px); Adjust the blur strength as needed */
+}
+.unblurred {
+    filter: none !important; /* Remove blur from the focused section */
+    position: relative; /* Ensure it stays on top */
+    z-index: 10; /* Keep it above other content */
+    padding: 20px; /* Padding for the content */
+    border-radius: 8px; /* Optional: rounded corners for the content box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: shadow for better focus */
+}
+.main-content {
+    transition: filter 0.3s ease; /* Smooth transition for blur effect */
+    position: relative;
+    filter: none; /* Initially, no blur */
+}

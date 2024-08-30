@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ansaar Naqvi</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- AOS CSS for Animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css"> <!-- Ensure the path is correct -->
+</head>
+
+<body>
+    <div id="main-content">
+        <!-- Navigation Section -->
+        <nav>
+            <div class="nav-container">
+                <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+                    About<span> Me</span>
+                </div>
+                <div class="links">
+                    <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="index.html">Home</a></div>
+                    <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="about.html">About</a></div>
+                    <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="projects.html">Projects</a></div>
+                    <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="services.html">Services</a></div>
+                    <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="contact.html">Contact</a></div>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Toggle Icon -->
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+
+            <!-- Dropdown Menu for Mobile View -->
+            <div class="dropdown">
+                <div class="links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="services.html">Services</a>
+                    <a href="contact.html">Contact</a>
+                    <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+                </div>
+            </div>
+        </nav>
+
+        <!-- About Content Section -->
+        <section class="about-section">
+            <div class="main-container">
+                <!-- Personal Introduction -->
+                <div class="content" data-aos="fade-right" data-aos-duration="1500">
+                    <h1>About Me</h1>
+                    <div class="about-info">
+                        <div class="about-image">
+                            <img src="Ansaar image1.png" alt="Ansaar Naqvi's Picture">
+                        </div>
+                        <div class="about-text">
+                            <p>Hi! I'm <strong>Ansaar Naqvi</strong>, a passionate Cybersecurity student with a love for exploring new technologies, developing engaging websites, and designing creative graphics.</p>
+                            <p>I enjoy solving complex challenges in cybersecurity and participating in CTF competitions. Outside of tech, I love to read, write, and explore the great outdoors.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mainDiv">
+                    <div class="section1">
+                        <!-- Educational Background -->
+                        <div class="educationSection" data-aos="fade-left" data-aos-duration="1500">
+                            <div class="header">
+                                <h2>Educational Background</h2>
+                            </div>
+                            <div id="education" class="toggle-content">
+                                <ul>
+                                    <li><strong>Bachelor of Science in Cybersecurity</strong> - Comsats University Islamabad, 6th Semester</li>
+                                    <li><strong>Intermediate in ICS</strong> - F.G Sir Syed College The Mall Rawalpindi</li>
+                                    <li><strong>Matriculation</strong> - Fazaia Inter College Nurkhan</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+
+                        <!-- Skills Section -->
+                        <div class="skillsSection" data-aos="fade-right" data-aos-duration="1500">
+                            <div class="header">
+                            <h2>Skills</h2>
+                        </div>
+                            <div id="skills" class="toggle-content">
+                                <ul class="skills-list">
+                                    <li><i class="fa-solid fa-code"></i> Web Development (HTML, CSS, JavaScript, WordPress)</li>
+                                    <li><i class="fa-solid fa-shield-alt"></i> Cybersecurity (CTF, Red Teaming, Network Security)</li>
+                                    <li><i class="fa-solid fa-paint-brush"></i> Graphic Design (Canva, Adobe Photoshop)</li>
+                                    <li><i class="fa-solid fa-database"></i> Database Management</li>
+                                    <li><i class="fa-solid fa-network-wired"></i> Networking</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section2">
+                        <!-- Personal Blog Section -->
+                        <div class="blogSection" data-aos="fade-up" data-aos-duration="1500">
+                            <div class="header">
+                            <h2>Personal Blog</h2>
+                        </div>
+                            <div id="blog" class="toggle-content">
+                                <p>I occasionally write about my experiences, tutorials, and insights in cybersecurity and web development. Check out my latest posts below:</p>
+                                <ul class="blog-list">
+                                    <li><a href="#">Exploring the Basics of Web Development</a></li>
+                                    <li><a href="#">How to Get Started with CTF Competitions</a></li>
+                                    <li><a href="#">My Journey into Cybersecurity: Lessons Learned</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Hobbies Section -->
+                        <div class="hobbiesSection" data-aos="fade-left" data-aos-duration="1500">
+                            <div class="header">
+                            <h2>Hobbies</h2>
+                        </div>
+                            <div id="hobbies" class="toggle-content">
+                                <p>In my free time, I love to:</p>
+                                <ul class="hobbies-list">
+                                    <li><i class="fa-solid fa-book"></i> Read tech blogs and fiction novels</li>
+                                    <li><i class="fa-solid fa-hiking"></i> Go hiking and explore nature trails</li>
+                                    <li><i class="fa-solid fa-gamepad"></i> Play strategy and simulation games</li>
+                                    <li><i class="fa-solid fa-camera-retro"></i> Photography</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div> <!-- End of main-content -->
+
+    <!-- AOS JS for Animations -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({ offset: 0, });
+    </script>
+
+    <!-- External JS -->
+    <script src="script.js"></script>
+
+    <!-- Toggle Section JS -->
+    <script>
+        function toggleSection(sectionId) {
+            var sections = document.querySelectorAll('.toggle-content');
+            var mainContent = document.getElementById('main-content');
+
+            // Hide all sections and blur background initially
+            sections.forEach(function (section) {
+                if (section.id === sectionId) {
+                    // Toggle the clicked section's visibility
+                    if (section.style.display === "block") {
+                        section.style.display = "none";
+                        mainContent.classList.remove('blurred');
+                        section.classList.remove('unblurred');
+                    } else {
+                        section.style.display = "block";
+                        mainContent.classList.add('blurred');
+                        section.classList.add('unblurred');
+                    }
+                } else {
+                    section.style.display = "none"; // Hide other sections
+                    section.classList.remove('unblurred'); // Remove unblurred from other sections
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
