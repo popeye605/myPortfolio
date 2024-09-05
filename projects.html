@@ -8,11 +8,12 @@
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap"
+        rel="stylesheet">
     <!-- AOS CSS for Animations -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- External CSS -->
-    <link rel="stylesheet" href="style.css"> <!-- Make sure to link your external CSS file -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -24,7 +25,7 @@
             </div>
             <div class="links">
                 <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="index.html">Home</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="about.html">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="About.html">About</a></div>
                 <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="projects.html">Projects</a></div>
                 <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="services.html">Services</a></div>
                 <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="contact.html">Contact</a></div>
@@ -47,21 +48,59 @@
         </div>
     </nav>
 
-
-    
+    <!-- Main Projects Section -->
     <section>
         <div class="main-container">
             <div class="content">
                 <h1>My Projects</h1>
                 <p>Here are some of the projects I've worked on...</p>
-                <!-- List of projects with descriptions and links -->
+
+                <!-- Project Titles with Hover Effect -->
+                <div class="project-titles">
+                    <h3 class="project-title"data-aos="fade-left" data-aos-duration="1500">Cybersecurity Projects</h3>
+                    <div class="project-details">
+                        <ul>
+                            <li> Network Vulnerability Assessment</li>
+                            <li> Firewall Configuration and Management</li>
+                            <li> Penetration Testing and Reporting</li>
+                            
+                        </ul>
+                    </div>
+
+                    <h3 class="project-title"data-aos="fade-right" data-aos-duration="1500">Python Projects</h3>
+                    <div class="project-details">
+                        <ul>
+                            <li> Web Scraping with BeautifulSoup</li>
+                            <li> Data Analysis with Pandas</li>
+                            <li> Flask Web Application</li>
+                        </ul>
+                    </div>
+
+                    <h3 class="project-title"data-aos="fade-up" data-aos-duration="1500">Java Projects</h3>
+                    <div class="project-details">
+                        <ul>
+                            <li><a href="https://github.com/popeye605/LibraryManagementSystem.git">Library Management System</a> </li>
+                            <li><a href="https://github.com/popeye605/HospitalManagementSystem.git"> Hospital Management System</a></li>
+                            <li><a href="https://github.com/popeye605/TravelAgentSoftware.git"> Travel Agent Software</a></li>
+                        </ul>
+                    </div>
+                    <h3 class="project-title"data-aos="fade-down" data-aos-duration="1500">Web Development</h3>
+                    <div class="project-details">
+                        <ul>
+                            <li> My Portfolio Website</li>
+                            <li> Camping Website</li>
+                            <li> Calculator App</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- AOS Animation and Custom Scripts -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init({offset: 0,});
+        AOS.init({ offset: 0 });
     </script>
     <script src="script.js"></script>
 </body>
