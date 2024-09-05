@@ -43,3 +43,36 @@ function eraseText(){
 }
 typewriter();
 
+
+
+
+function showDetails(serviceId) {
+    // Hide header text
+    document.getElementById("headerText").style.display = "none";
+
+    // Hide all service cards
+    const cards = document.querySelectorAll(".card");
+    cards.forEach(card => {
+        card.style.display = "none";
+    });
+
+    // Show the selected service details
+    document.getElementById(serviceId).style.display = "block";
+}
+
+function goBack() {
+    // Show header text
+    document.getElementById("headerText").style.display = "block";
+
+    // Show all service cards
+    const cards = document.querySelectorAll(".card");
+    cards.forEach(card => {
+        card.style.display = "block";
+    });
+
+    // Hide all service details
+    const details = document.querySelectorAll(".service-details");
+    details.forEach(detail => {
+        detail.style.display = "none";
+    });
+}

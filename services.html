@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Ansaar Naqvi</title>
+    <title>Services - Ansaar Naqvi</title>
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Google Fonts -->
@@ -12,7 +12,7 @@
     <!-- AOS CSS for Animations -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- External CSS -->
-    <link rel="stylesheet" href="style.css"> <!-- Make sure to link your external CSS file -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -20,11 +20,11 @@
     <nav>
         <div class="nav-container">
             <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
-                My<span>  Services</span> 
+                My<span> Services</span>
             </div>
             <div class="links">
                 <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="index.html">Home</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="about.html">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="About.html">About</a></div>
                 <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="projects.html">Projects</a></div>
                 <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="services.html">Services</a></div>
                 <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="contact.html">Contact</a></div>
@@ -49,17 +49,84 @@
 
     <section>
         <div class="main-container">
-            <div class="content">
-                <h1>Services</h1>
-                <p>I offer a variety of services including...</p>
-                <!-- List of services offered -->
+            <!-- Header text that will hide -->
+            <div class="header-text" id="headerText">
+                <h1 data-aos="fade-left" data-aos-duration="1500">Services</h1>
+                <p data-aos="fade-right" data-aos-duration="1500">I offer a variety of services to meet your cybersecurity and web development needs.</p>
+            </div>
+
+            <!-- Service cards -->
+            <div class="service-cards">
+                <!-- Web Pentesting Service Card -->
+                <div class="card" onclick="showDetails('webPentesting')" data-aos="fade-up" data-aos-duration="1500">
+                    <h2>Web Pentesting</h2>
+                </div>
+
+                <!-- SOC Analyst Service Card -->
+                <div class="card" onclick="showDetails('socAnalyst')" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
+                    <h2>SOC Analyst</h2>
+                </div>
+
+                <!-- Web Development Service Card -->
+                <div class="card" onclick="showDetails('webDevelopment')" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
+                    <h2>Web Development</h2>
+                </div>
+            </div>
+
+            <!-- Service Details (initially hidden) -->
+            <div class="service-details" id="webPentesting" style="display: none;">
+                <h2>Web Pentesting</h2>
+                <p>Identify vulnerabilities in your web applications before the hackers do. Our web pentesting
+                     services include comprehensive testing for OWASP Top 10 vulnerabilities,
+                     automated and manual testing, and detailed reporting with actionable remediation steps.
+                    
+                    </p>
+                <h3>Packages</h3>
+                <ul>
+                    <li><strong>Basic Package:</strong>     Automated vulnerability scanning and basic reporting. Ideal for small businesses.<span class="price">  $299</span></li>
+                    <li><strong>Advanced Package:</strong>      Automated and manual testing, detailed reporting, and one-time consultation. Suitable for medium-sized businesses.<span class="price">  $699</span></li>
+                    <li><strong>Premium Package:</strong>       Comprehensive testing, detailed reporting, remediation guidance, and continuous monitoring. Perfect for large enterprises.<span class="price">  $1499</span></li>
+                </ul>
+                <button onclick="goBack()">Back</button>
+            </div>
+
+            <div class="service-details" id="socAnalyst" style="display: none;">
+                <h2>SOC Analyst</h2>
+                <p>Our Security Operations Center (SOC) Analyst services provide 24/7 monitoring and threat detection 
+                    to keep your organization safe from cyber threats. With real-time alerting,
+                     incident response, and threat intelligence, we ensure your network is secure around the clock.
+                    
+                    </p>
+                <h3>Packages</h3>
+                <ul>
+                    <li><strong>Starter Package:</strong>       8/5 monitoring with monthly reports and threat assessments. <span class="price">  $499</span></li>
+                    <li><strong>Professional Package:</strong>          24/7 monitoring, incident response, and weekly threat intelligence updates.<span class="price">  $999</span></li>
+                    <li><strong>Enterprise Package:</strong>        Full SOC services including advanced threat hunting, 24/7 monitoring, incident response, and quarterly security audits. <span class="price">  $1999</span></li>
+                </ul>
+                <button onclick="goBack()">Back</button>
+            </div>
+
+            <div class="service-details" id="webDevelopment" style="display: none;">
+                <h2>Web Development</h2>
+                <p>From stunning landing pages to complex web applications, I offer full-stack web development services tailored to your needs.
+                     With a focus on responsive design, performance optimization, and SEO, I ensure your website stands out and performs well.
+                    
+                    </p>
+                <h3>Packages</h3>
+                <ul>
+                    <li><strong>Basic Website:</strong>         Up to 5 pages, responsive design, and basic SEO. Perfect for startups and personal blogs. <span class="price">  $499</span></li>
+                    <li><strong>Business Website:</strong>      Up to 15 pages, e-commerce functionality, SEO optimization, and 3 months of support. Ideal for small to medium-sized businesses. <span class="price">  $1299</span></li>
+                    <li><strong>Enterprise Solution:</strong>       Custom web application development, API integration, SEO, and 1 year of support and maintenance. Suitable for large enterprises.<span class="price">  $2999</span></li>
+                </ul>
+                <button onclick="goBack()">Back</button>
             </div>
         </div>
     </section>
 
+    <!-- Include AOS and custom script -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init({offset: 0,});
+        AOS.init({ offset: 0 });
     </script>
     <script src="script.js"></script>
 </body>
